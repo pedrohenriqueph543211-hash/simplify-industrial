@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título exibido na aba do navegador -->
+    <title>Soluções | Simplify Industrial</title>
+
+    <!--
+        ========================================================
+        PROJETO: SIMPLIFY INDUSTRIAL
+        PÁGINA: SOLUÇÕES
+        DISCIPLINA: PROGRAMAÇÃO WEB I
+        ========================================================
+
+        OBJETIVO:
+        Apresentar as principais soluções propostas pelo
+        Simplify Industrial para auxiliar na gestão industrial.
+
+        CONTEÚDO:
+        - Controle de estoque.
+        - Controle de produção.
+        - Controle de custos.
+
+        TECNOLOGIAS:
+        - HTML5 para estruturação do conteúdo.
+        - CSS3 para estilização e responsividade.
+        - Bootstrap para componentes e recursos visuais.
+        - AOS para animações durante a rolagem.
+
+        O CSS próprio do projeto continua sendo utilizado
+        para preservar a identidade visual da página.
+    -->
+
+    <!-- Bootstrap 5: biblioteca de estilos e componentes -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous"
+    >
+
+    <!-- CSS da biblioteca AOS para as animações -->
+    <link
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+        rel="stylesheet"
+    >
+
+    <!--
+        CSS próprio do projeto.
+
+        O caminho ../css/style.css volta da pasta pages
+        para a pasta principal e acessa o arquivo de estilos.
+    -->
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <!--
+        ========================================================
+        CABEÇALHO E MENU DE NAVEGAÇÃO
+        ========================================================
+
+        O cabeçalho apresenta o nome do projeto e os links
+        que permitem navegar entre as três páginas.
+    -->
+
+    <header>
+
+        <h2>Simplify Industrial</h2>
+
+        <nav>
+
+            <!-- Retorna à página inicial -->
+            <a href="../index.html#inicio">Início</a>
+
+            <!-- Link para a página atual -->
+            <a href="solucoes.html">Soluções</a>
+
+            <!-- Abre a página de contato -->
+            <a href="contato.html">Contato</a>
+
+        </nav>
+
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+
+        <!--
+            ====================================================
+            SEÇÃO DE SOLUÇÕES
+            ====================================================
+
+            Esta seção apresenta três soluções propostas
+            pelo Simplify Industrial.
+
+            O CSS Grid organiza os cards em colunas e as
+            media queries adaptam o layout para telas menores.
+
+            O atributo data-aos aplica animações aos cards
+            quando eles entram na área visível da página.
+        -->
+
+        <section id="solucoes">
+
+            <h2>Nossas soluções</h2>
+
+            <!--
+                SOLUÇÃO 1: CONTROLE DE ESTOQUE
+
+                Apresenta recursos relacionados ao acompanhamento
+                de materiais, entradas, saídas e saldos.
+            -->
+            <article data-aos="fade-up">
+
+                <h3>Controle de Estoque</h3>
+
+                <p>
+                    Acompanhe entradas, saídas e saldos de materiais,
+                    mantendo o estoque organizado e atualizado.
+                </p>
+
+            </article>
+
+            <!--
+                SOLUÇÃO 2: CONTROLE DE PRODUÇÃO
+
+                Apresenta a proposta de acompanhar as ordens
+                e as atividades do processo produtivo.
+            -->
+            <article data-aos="fade-up">
+
+                <h3>Controle de Produção</h3>
+
+                <p>
+                    Acompanhe as ordens de produção e organize
+                    as atividades da sua operação.
+                </p>
+
+            </article>
+
+            <!--
+                SOLUÇÃO 3: CONTROLE DE CUSTOS
+
+                Apresenta a proposta de acompanhar os custos
+                dos materiais e identificar recursos parados.
+            -->
+            <article data-aos="fade-up">
+
+                <h3>Controle de Custos</h3>
+
+                <p>
+                    Visualize os custos dos materiais e identifique
+                    recursos parados em estoque.
+                </p>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <!--
+        ========================================================
+        RODAPÉ
+        ========================================================
+
+        Exibe a informação de direitos reservados do projeto.
+    -->
+
+    <footer>
+
+        <p>© 2026 Simplify Industrial. Todos os direitos reservados.</p>
+
+    </footer>
+
+    <!--
+        ========================================================
+        CARREGAMENTO DAS BIBLIOTECAS JAVASCRIPT
+        ========================================================
+
+        As bibliotecas são carregadas antes do script.js.
+
+        jQuery:
+        Utilizado pelas interações compartilhadas do projeto.
+
+        Bootstrap:
+        Disponibiliza os recursos JavaScript da biblioteca.
+
+        AOS:
+        Executa as animações dos cards durante a rolagem.
+
+        script.js:
+        Contém as interações implementadas no projeto.
+        As condições if verificam a existência dos elementos
+        antes de configurar os eventos de cada página.
+    -->
+
+    <!-- Biblioteca jQuery -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+
+    <!-- JavaScript do Bootstrap -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"
+    ></script>
+
+    <!-- JavaScript da biblioteca AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- JavaScript compartilhado do projeto -->
+    <script src="../js/script.js"></script>
+
+</body>
+</html>

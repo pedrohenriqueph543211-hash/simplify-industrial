@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título exibido na aba do navegador -->
+    <title>Contato | Simplify Industrial</title>
+
+    <!--
+        ========================================================
+        PROJETO: SIMPLIFY INDUSTRIAL
+        PÁGINA: CONTATO
+        DISCIPLINA: PROGRAMAÇÃO WEB I
+        ========================================================
+
+        OBJETIVO:
+        Esta página permite que o visitante preencha um formulário
+        de contato e visualize uma confirmação após o preenchimento
+        válido dos campos obrigatórios.
+
+        TECNOLOGIAS:
+        - HTML5 para estruturar o conteúdo.
+        - CSS3 para a aparência e a responsividade.
+        - Bootstrap para estilização dos campos, botão e alerta.
+        - JavaScript para controlar o formulário.
+        - jQuery para as funcionalidades compartilhadas do projeto.
+
+        OBSERVAÇÃO:
+        O formulário é demonstrativo. Os dados não são enviados
+        para um servidor nem armazenados em banco de dados.
+    -->
+
+    <!-- CSS do Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous"
+    >
+
+    <!-- CSS próprio do Simplify Industrial -->
+    <!-- ../ volta da pasta pages para acessar a pasta css -->
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <!--
+        ========================================================
+        CABEÇALHO E MENU DE NAVEGAÇÃO
+        ========================================================
+
+        O cabeçalho apresenta o nome do projeto e os links
+        utilizados para navegar entre as páginas.
+    -->
+
+    <header>
+
+        <h2>Simplify Industrial</h2>
+
+        <nav>
+            <!-- Retorna à página inicial -->
+            <a href="../index.html#inicio">Início</a>
+
+            <!-- Abre a página de soluções -->
+            <a href="solucoes.html">Soluções</a>
+
+            <!-- Link para a página atual -->
+            <a href="contato.html">Contato</a>
+        </nav>
+
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+
+        <!--
+            ====================================================
+            SEÇÃO DE CONTATO
+            ====================================================
+
+            Contém o formulário utilizado para preencher os dados
+            de contato do visitante.
+
+            Os campos de nome, e-mail e mensagem são obrigatórios.
+            O campo empresa é opcional.
+        -->
+
+        <section id="contato">
+
+            <h2>Entre em contato</h2>
+
+            <!--
+                FORMULÁRIO DE CONTATO
+
+                O atributo required exige o preenchimento dos
+                campos obrigatórios.
+
+                O tipo email permite que o navegador faça uma
+                validação básica do formato do endereço.
+
+                O JavaScript utiliza o ID formulario-contato
+                para localizar o formulário e tratar o evento
+                submit sem recarregar a página.
+            -->
+
+            <form id="formulario-contato" action="#" method="post">
+
+                <!-- Campo obrigatório: nome -->
+                <label for="nome">Nome</label>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    class="form-control"
+                    required
+                >
+
+                <!-- Campo obrigatório: e-mail -->
+                <label for="email">E-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    required
+                >
+
+                <!-- Campo opcional: empresa -->
+                <label for="empresa">Empresa</label>
+                <input
+                    type="text"
+                    id="empresa"
+                    name="empresa"
+                    class="form-control"
+                >
+
+                <!-- Campo obrigatório: mensagem -->
+                <label for="mensagem-contato">Mensagem</label>
+                <textarea
+                    id="mensagem-contato"
+                    name="mensagem"
+                    class="form-control"
+                    required
+                ></textarea>
+
+                <!-- Botão para tentar enviar o formulário -->
+                <button type="submit" class="btn btn-primary">
+                    Enviar Mensagem
+                </button>
+
+            </form>
+
+            <!--
+                ALERTA DE CONFIRMAÇÃO
+
+                O parágrafo começa escondido por causa da classe
+                d-none do Bootstrap.
+
+                Após o preenchimento válido, o JavaScript define
+                o texto de confirmação e remove d-none.
+
+                aria-live e role ajudam tecnologias assistivas
+                a identificar a mensagem exibida.
+            -->
+
+            <p
+                id="retorno-formulario"
+                class="alert alert-success mt-3 d-none"
+                role="status"
+                aria-live="polite"
+            ></p>
+
+        </section>
+
+    </main>
+
+    <!--
+        ========================================================
+        RODAPÉ
+        ========================================================
+
+        Exibe a informação de direitos reservados.
+    -->
+
+    <footer>
+
+        <p>© 2026 Simplify Industrial. Todos os direitos reservados.</p>
+
+    </footer>
+
+    <!--
+        ========================================================
+        CARREGAMENTO DAS BIBLIOTECAS JAVASCRIPT
+        ========================================================
+
+        A ordem de carregamento é importante:
+        1. jQuery, utilizado na funcionalidade dos benefícios.
+        2. Bootstrap, responsável pelos recursos JavaScript.
+        3. script.js, com as interações próprias do projeto.
+
+        O AOS é utilizado na página inicial, onde os cards
+        possuem animações durante a rolagem.
+    -->
+
+    <!-- Biblioteca jQuery -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+
+    <!-- JavaScript do Bootstrap -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"
+    ></script>
+
+    <!-- JavaScript compartilhado do projeto -->
+    <!-- ../ volta da pasta pages para acessar a pasta js -->
+    <script src="../js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        ========================================================
+        PROJETO: SIMPLIFY INDUSTRIAL
+        DISCIPLINA: PROGRAMAÇÃO WEB I
+        ========================================================
+
+        Página principal do projeto.
+
+        N1:
+        - Estruturação da página com HTML5 semântico.
+        - Organização das seções e dos conteúdos.
+        - Integração com o CSS próprio.
+
+        N2:
+        - Integração com JavaScript e jQuery.
+        - Utilização do Bootstrap.
+        - Animações com a biblioteca AOS.
+        - Implementação de interações com o usuário.
+    -->
+
+    <!-- Nome exibido na aba do navegador -->
+    <title>Simplify Industrial</title>
+
+    <!--
+        ========================================================
+        BIBLIOTECAS E FOLHAS DE ESTILO
+        ========================================================
+    -->
+
+    <!-- Bootstrap 5: componentes e estilos prontos -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous"
+    >
+
+    <!-- AOS: animações acionadas durante a rolagem da página -->
+    <link
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+        rel="stylesheet"
+    >
+
+    <!-- CSS próprio do Simplify Industrial -->
+    <!-- Carregado depois das bibliotecas para permitir personalizações -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!--
+        ========================================================
+        CABEÇALHO E MENU PRINCIPAL
+        ========================================================
+
+        O header contém o nome do projeto e os links de navegação.
+        O nav agrupa os links que permitem acessar as seções e
+        as páginas adicionais do site.
+    -->
+
+    <header>
+
+        <h2>Simplify Industrial</h2>
+
+        <nav>
+            <!-- Navegação para as seções da página inicial -->
+            <a href="#inicio">Início</a>
+
+            <!-- Acesso à página específica de soluções -->
+            <a href="pages/solucoes.html">Soluções</a>
+
+            <!-- Acesso à seção de benefícios desta página -->
+            <a href="#beneficios">Benefícios</a>
+
+            <!-- Acesso à página específica de contato -->
+            <a href="pages/contato.html">Contato</a>
+        </nav>
+
+    </header>
+
+    <!--
+        ========================================================
+        CONTEÚDO PRINCIPAL
+        ========================================================
+
+        O main agrupa o conteúdo principal da página.
+        Cada section representa uma área específica do site.
+    -->
+
+    <main>
+
+        <!--
+            ====================================================
+            SEÇÃO INICIAL
+            ====================================================
+
+            Apresenta o Simplify Industrial e sua proposta.
+            O link "Conheça o Simplify" possui uma interação
+            implementada em JavaScript.
+        -->
+
+        <section id="inicio">
+
+            <h1>Mais controle. Menos complicação.</h1>
+
+            <p>
+                Na vida e no trabalho, precisamos ter controle das coisas para
+                evitar erros, perdas e desorganização. Quando falta controle,
+                tudo pode virar uma bagunça. Foi pensando nisso que nasceu o
+                Simplify: uma solução criada para facilitar sua gestão,
+                organizar sua operação e simplificar o seu dia a dia.
+            </p>
+
+            <!-- Link para a seção de soluções -->
+            <a href="#solucoes">Conheça o Simplify</a>
+
+        </section>
+
+        <!--
+            ====================================================
+            SEÇÃO DE SOLUÇÕES
+            ====================================================
+
+            Apresenta as principais soluções propostas pelo sistema.
+
+            A busca permite filtrar os cards conforme o texto digitado.
+            Os cards utilizam o atributo data-aos para receber
+            animações durante a rolagem da página.
+
+            JavaScript:
+            - Localização dos elementos pelo DOM.
+            - Busca e filtragem dos cards.
+            - Exibição de uma mensagem após o clique no link inicial.
+        -->
+
+        <section id="solucoes">
+
+            <h2>Nossas soluções</h2>
+
+            <!-- Área em que o JavaScript exibe a mensagem do botão inicial -->
+            <p id="mensagem"></p>
+
+            <!-- Campo utilizado para pesquisar as soluções -->
+            <input
+                type="search"
+                id="busca-solucoes"
+                class="form-control"
+                placeholder="Buscar uma solução..."
+                aria-label="Buscar uma solução"
+            >
+
+            <!-- Solução: controle de estoque -->
+            <!-- AOS aplica a animação de entrada durante a rolagem -->
+            <article data-aos="fade-up">
+
+                <h3>Controle de Estoque</h3>
+
+                <p>
+                    Acompanhe entradas, saídas, saldos, divergências e
+                    movimentações dos materiais e produtos. Tenha uma visão
+                    atualizada do estoque e identifique quando uma reposição
+                    pode ser necessária.
+                </p>
+
+            </article>
+
+            <!-- Solução: controle de produção -->
+            <article data-aos="fade-up">
+
+                <h3>Controle de Produção</h3>
+
+                <p>
+                    Acompanhe as ordens de produção e tenha uma visão melhor
+                    do que precisa ser produzido, ajudando a evitar excesso de
+                    produção, estoque parado e falta de produtos.
+                </p>
+
+            </article>
+
+            <!-- Solução: controle de custos -->
+            <article data-aos="fade-up">
+
+                <h3>Controle de Custos</h3>
+
+                <p>
+                    Acompanhe o valor dos materiais, suprimentos e produtos
+                    armazenados, ajudando a identificar recursos parados em
+                    estoque e apoiar decisões de compra e produção.
+                </p>
+
+            </article>
+
+        </section>
+
+        <!--
+            ====================================================
+            SEÇÃO DE BENEFÍCIOS
+            ====================================================
+
+            Apresenta os benefícios propostos pelo Simplify Industrial.
+
+            N2:
+            O botão utiliza jQuery para mostrar e ocultar os cards
+            com uma animação implementada pelo método slideToggle().
+        -->
+
+        <section id="beneficios">
+
+            <h2>Benefícios do Simplify</h2>
+
+            <!-- Botão controlado pelo jQuery -->
+            <button
+                type="button"
+                id="alternar-beneficios"
+                class="btn btn-primary"
+            >
+                Mostrar/Ocultar benefícios
+            </button>
+
+            <!-- Benefício: organização -->
+            <article data-aos="fade-up">
+
+                <h3>Mais organização</h3>
+
+                <p>
+                    Tenha as principais informações da sua operação em um só
+                    lugar, facilitando o acompanhamento do estoque, produção
+                    e custos e deixando a rotina mais organizada.
+                </p>
+
+            </article>
+
+            <!-- Benefício: redução de desperdícios -->
+            <article data-aos="fade-up">
+
+                <h3>Menos desperdícios</h3>
+
+                <p>
+                    Tenha mais controle para evitar excesso de produção,
+                    falta de produtos, compras desnecessárias e recursos
+                    parados, ajudando a tornar a operação mais eficiente.
+                </p>
+
+            </article>
+
+            <!-- Benefício: apoio à tomada de decisão -->
+            <article data-aos="fade-up">
+
+                <h3>Melhor tomada de decisão</h3>
+
+                <p>
+                    Com informações mais organizadas e fáceis de acompanhar,
+                    você consegue analisar melhor a situação da empresa e
+                    tomar decisões com mais segurança.
+                </p>
+
+            </article>
+
+            <!-- Benefício: visibilidade da operação -->
+            <article data-aos="fade-up">
+
+                <h3>Mais visibilidade</h3>
+
+                <p>
+                    Saiba melhor o que está acontecendo na sua indústria,
+                    acompanhando quantidades, movimentações, produção e
+                    recursos que estão parados em estoque.
+                </p>
+
+            </article>
+
+        </section>
+
+        <!--
+            ====================================================
+            SEÇÃO DE CONTATO
+            ====================================================
+
+            Contém um formulário para preenchimento dos dados
+            de contato do visitante.
+
+            A validação inicial utiliza os recursos do HTML5,
+            como o atributo required e o tipo email.
+
+            O JavaScript controla o evento submit e exibe
+            uma mensagem de confirmação com o Bootstrap.
+
+            IMPORTANTE:
+            O formulário é demonstrativo. Os dados não são enviados
+            para um servidor nem armazenados em banco de dados.
+        -->
+
+        <section id="contato">
+
+            <h2>Entre em contato</h2>
+
+            <!-- Formulário de contato -->
+            <form id="formulario-contato" action="#" method="post">
+
+                <!-- Campo obrigatório: nome -->
+                <label for="nome">Nome</label>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    class="form-control"
+                    required
+                >
+
+                <!-- Campo obrigatório: e-mail -->
+                <label for="email">E-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    required
+                >
+
+                <!-- Campo opcional: empresa -->
+                <label for="empresa">Empresa</label>
+                <input
+                    type="text"
+                    id="empresa"
+                    name="empresa"
+                    class="form-control"
+                >
+
+                <!-- Campo obrigatório: mensagem -->
+                <label for="mensagem-contato">Mensagem</label>
+                <textarea
+                    id="mensagem-contato"
+                    name="mensagem"
+                    class="form-control"
+                    required
+                ></textarea>
+
+                <!-- Botão que inicia a tentativa de envio -->
+                <button type="submit" class="btn btn-primary">
+                    Enviar Mensagem
+                </button>
+
+            </form>
+
+            <!--
+                Alerta de confirmação do Bootstrap.
+
+                d-none:
+                Mantém a mensagem escondida inicialmente.
+
+                alert-success:
+                Define a aparência visual de sucesso.
+
+                O JavaScript remove d-none depois do envio válido.
+            -->
+            <p
+                id="retorno-formulario"
+                class="alert alert-success mt-3 d-none"
+                role="status"
+                aria-live="polite"
+            ></p>
+
+        </section>
+
+    </main>
+
+    <!--
+        ========================================================
+        RODAPÉ
+        ========================================================
+
+        O footer contém a informação de direitos reservados.
+    -->
+
+    <footer>
+
+        <p>© 2026 Simplify Industrial. Todos os direitos reservados.</p>
+
+    </footer>
+
+    <!--
+        ========================================================
+        CARREGAMENTO DAS BIBLIOTECAS JAVASCRIPT
+        ========================================================
+
+        A ordem dos scripts é importante:
+        1. jQuery, utilizado na interação dos benefícios.
+        2. Bootstrap, que disponibiliza seus recursos JavaScript.
+        3. AOS, utilizado nas animações durante a rolagem.
+        4. script.js, com as funcionalidades próprias do projeto.
+    -->
+
+    <!-- Biblioteca jQuery -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+
+    <!-- JavaScript do Bootstrap -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"
+    ></script>
+
+    <!-- JavaScript da biblioteca AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- JavaScript próprio do projeto -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

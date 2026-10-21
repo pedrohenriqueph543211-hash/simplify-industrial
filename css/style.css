@@ -1,0 +1,275 @@
+@charset "UTF-8";
+
+/* Tirando os espaçamentos padrões do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configurações gerais da página */
+body {
+    background-color: #F1F5F9;
+    color: #1F2937;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+/* Cabeçalho principal */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #0F2A43;
+}
+
+/* Nome do sistema no cabeçalho */
+header h2 {
+    color: white;
+}
+
+/* Organização dos links do menu */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+/* Aparência dos links */
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Parte inicial da página */
+#inicio {
+    text-align: center;
+    padding: 40px;
+}
+
+/* Título principal */
+#inicio h1 {
+    color: #145DA0;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+/* Texto inicial */
+#inicio p {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Botão da parte inicial */
+#inicio a {
+    background-color: #2563EB;
+    display: inline-block;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+/* Efeito quando passa o mouse no botão */
+#inicio a:hover {
+    background-color: #145DA0;
+    color: white;
+}
+
+/* Área das soluções */
+#solucoes #mensagem {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+#solucoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+#solucoes #busca-solucoes {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 500px;
+    justify-self: center;
+    padding: 12px;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+}
+
+/* Título da seção de soluções */
+#solucoes h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 32px;
+    color: #145DA0;
+}
+
+/* Cards das soluções */
+#solucoes article {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 4px 10px #CBD5E1;
+}
+
+/* Área dos benefícios */
+#beneficios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+/* Título da seção de benefícios */
+#beneficios h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 32px;
+    color: #145DA0;
+}
+
+#beneficios #alternar-beneficios {
+    grid-column: 1 / -1;
+    justify-self: center;
+    padding: 10px 16px;
+    background-color: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#beneficios #alternar-beneficios:hover {
+    background-color: #145DA0;
+}
+
+/* Cards dos benefícios */
+#beneficios article {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 4px 10px #CBD5E1;
+}
+
+/* Área de contato */
+#contato {
+    padding: 40px;
+    text-align: center;
+}
+
+/* Título da seção de contato */
+#contato h2 {
+    font-size: 32px;
+    color: #145DA0;
+    margin-bottom: 20px;
+}
+
+/* Organização dos campos do formulário */
+#contato form {
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilo dos campos */
+#contato input,
+#contato textarea {
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+/* Tamanho da área de mensagem */
+#contato textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* Botão do formulário */
+#contato button {
+    padding: 10px;
+    background-color: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Efeito do botão ao passar o mouse */
+#contato button:hover {
+    background-color: #145DA0;
+}
+
+/* Rodapé da página */
+footer {
+    background-color: #0F2A43;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Ajuste das soluções para telas menores */
+@media (max-width: 900px) {
+
+    #solucoes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* Ajustes para celular */
+@media (max-width: 600px) {
+
+    #solucoes {
+        grid-template-columns: 1fr;
+    }
+
+    #beneficios {
+        grid-template-columns: 1fr;
+    }
+
+    header h2 {
+        font-size: 22px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #inicio h1 {
+        font-size: 36px;
+    }
+
+    #solucoes h2 {
+        font-size: 26px;
+    }
+
+    #beneficios h2 {
+        font-size: 26px;
+    }
+
+    #contato {
+        padding: 20px;
+    }
+
+    #contato form {
+        width: 100%;
+    }
+}
